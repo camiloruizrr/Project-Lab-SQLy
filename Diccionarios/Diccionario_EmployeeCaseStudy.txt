@@ -1,0 +1,157 @@
+{
+"Database": "EmployeeCaseStudy",
+"Schema": "dbo",
+"description": "Diccionario de la base de datos EmployeeCaseStudy, contiene información general de empleados",
+"Tables":[
+{
+    "Employee": {
+        "EmployeeID": {
+            "data_type": "int",
+            "is_nullable": false,
+            "is_identity": true,
+            "description": "Identificador único del empleado en la organización. Actúa como clave primaria y punto central de referencia para todas las relaciones laborales, históricas y administrativas."
+        },
+        "LastName": {
+            "data_type": "nchar(30.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Elemento del nombre legal del empleado utilizado para identificación personal y administrativa."
+        },
+        "FirstName": {
+            "data_type": "nchar(29.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Elemento del nombre legal del empleado utilizado para identificación personal y administrativa."
+        },
+        "MiddleInitial": {
+            "data_type": "nchar(1.0)",
+            "is_nullable": true,
+            "is_identity": false,
+            "description": "Elemento del nombre legal del empleado utilizado para identificación personal y administrativa."
+        },
+        "SSN": {
+            "data_type": "char(11.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Número de identificación personal del empleado, usado para propósitos legales y de registro oficial."
+        },
+        "Address": {
+            "data_type": "char(40.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Información de localización física asociada al empleado para comunicación, registros internos y cumplimiento administrativo."
+        },
+        "City": {
+            "data_type": "char(16.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Información de localización física asociada al empleado para comunicación, registros internos y cumplimiento administrativo."
+        },
+        "State": {
+            "data_type": "char(2.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Información de localización física asociada al empleado para comunicación, registros internos y cumplimiento administrativo."
+        },
+        "Zip": {
+            "data_type": "char(5.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Información de localización física asociada al empleado para comunicación, registros internos y cumplimiento administrativo."
+        },
+        "Phone": {
+            "data_type": "char(14.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Número de contacto telefónico del empleado, utilizado para comunicación interna o administrativa."
+        },
+        "Status": {
+            "data_type": "tinyint",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Indica el estado laboral del empleado (por ejemplo activo, retirado, suspendido). Determina condiciones de operación dentro de los procesos de gestión de personal."
+        },
+        "Description": {
+            "data_type": "char(179.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Campo descriptivo adicional utilizado para registrar notas o información extendida relevante al empleado."
+        }
+    },
+    "EmployeeHeap": {
+        "EmployeeID": {
+            "data_type": "int",
+            "is_nullable": false,
+            "is_identity": true,
+            "description": "Identificador único dentro de la tabla EmployeeHeap, usado para establecer relaciones con otras entidades del modelo."
+        },
+        "LastName": {
+            "data_type": "nchar(30.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Elemento del nombre legal del empleado utilizado para identificación personal y administrativa."
+        },
+        "FirstName": {
+            "data_type": "nchar(29.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Elemento del nombre legal del empleado utilizado para identificación personal y administrativa."
+        },
+        "MiddleInitial": {
+            "data_type": "nchar(1.0)",
+            "is_nullable": true,
+            "is_identity": false,
+            "description": "Elemento del nombre legal del empleado utilizado para identificación personal y administrativa."
+        },
+        "SSN": {
+            "data_type": "char(11.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Número de identificación personal del empleado, usado para propósitos legales y de registro oficial."
+        },
+        "Address": {
+            "data_type": "char(40.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Información de localización física asociada al empleado para comunicación, registros internos y cumplimiento administrativo."
+        },
+        "City": {
+            "data_type": "char(16.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Información de localización física asociada al empleado para comunicación, registros internos y cumplimiento administrativo."
+        },
+        "State": {
+            "data_type": "char(2.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Información de localización física asociada al empleado para comunicación, registros internos y cumplimiento administrativo."
+        },
+        "Zip": {
+            "data_type": "char(5.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Información de localización física asociada al empleado para comunicación, registros internos y cumplimiento administrativo."
+        },
+        "Phone": {
+            "data_type": "char(14.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Número de contacto telefónico del empleado, utilizado para comunicación interna o administrativa."
+        },
+        "Status": {
+            "data_type": "tinyint",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Indica el estado laboral del empleado (por ejemplo activo, retirado, suspendido). Determina condiciones de operación dentro de los procesos de gestión de personal."
+        },
+        "Description": {
+            "data_type": "char(179.0)",
+            "is_nullable": false,
+            "is_identity": false,
+            "description": "Campo descriptivo adicional utilizado para registrar notas o información extendida relevante al empleado."
+        }
+    }
+}
+]
+}

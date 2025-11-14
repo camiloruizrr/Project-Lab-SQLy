@@ -1,0 +1,1949 @@
+{
+"database_name": "BaseballData",
+"Schema": "dbo",
+"description": "Diccionario de la base de datos BaseballData, contiene información en diferentes tablas sobre jugadores de baseball e información general",
+"tables":[
+{
+  "allstarfull": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año del Juego de Estrellas."
+    },
+    "gameNum": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Número de juego en el año."
+    },
+    "gameID": {
+      "data_type": "varchar(12)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador único del juego."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "GP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Indica si el jugador participó (Games Played)."
+    },
+    "startingPos": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Posición inicial."
+    }
+  },
+  "appearances": {
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador."
+    },
+    "G_all": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Total de juegos jugados."
+    },
+    "G_batting": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos con aparición de bateo."
+    },
+    "G_defense": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos con aparición defensiva."
+    },
+    "G_p": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Pitcher."
+    },
+    "G_c": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Catcher."
+    },
+    "G_1b": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Primera Base."
+    },
+    "G_2b": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Segunda Base."
+    },
+    "G_3b": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Tercera Base."
+    },
+    "G_ss": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Shortstop."
+    },
+    "G_lf": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Left Fielder."
+    },
+    "G_cf": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Center Fielder."
+    },
+    "G_rf": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Right Fielder."
+    },
+    "G_of": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos totales como Outfielder."
+    },
+    "G_dh": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Designated Hitter."
+    },
+    "G_ph": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Pinch Hitter."
+    },
+    "G_pr": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Pinch Runner."
+    }
+  },
+  "awardsmanagers": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del manager."
+    },
+    "awardID": {
+      "data_type": "varchar(255)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del premio ganado."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año del premio."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Liga del premio."
+    },
+    "tie": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Indica si fue un empate ('Y')."
+    },
+    "notes": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Notas adicionales."
+    }
+  },
+  "awardsplayers": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador."
+    },
+    "awardID": {
+      "data_type": "varchar(255)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del premio ganado."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año del premio."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Liga del premio."
+    },
+    "tie": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Indica si fue un empate ('Y')."
+    },
+    "notes": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Notas adicionales."
+    }
+  },
+  "awardssharemanagers": {
+    "awardID": {
+      "data_type": "varchar(255)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del premio."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la votación."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Liga de la votación."
+    },
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del manager que recibió votos."
+    },
+    "pointsWon": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Puntos de votación ganados."
+    },
+    "pointsMax": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Máximo de puntos posibles."
+    },
+    "votesFirst": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Votos de primer lugar recibidos."
+    }
+  },
+  "awardsshareplayers": {
+    "awardID": {
+      "data_type": "varchar(255)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del premio."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la votación."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Liga de la votación."
+    },
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del jugador que recibió votos."
+    },
+    "pointsWon": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Puntos de votación ganados."
+    },
+    "pointsMax": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Máximo de puntos posibles."
+    },
+    "votesFirst": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Votos de primer lugar recibidos."
+    }
+  },
+  "batting": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "stint": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Período del jugador con un equipo en el año."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos jugados."
+    },
+    "AB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Turnos al bate (At Bats)."
+    },
+    "R": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras anotadas (Runs)."
+    },
+    "H": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Hits conectados."
+    },
+    "2B": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Dobles."
+    },
+    "3B": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Triples."
+    },
+    "HR": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Jonrones (Home Runs)."
+    },
+    "RBI": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras impulsadas (Runs Batted In)."
+    },
+    "SB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases robadas (Stolen Bases)."
+    },
+    "CS": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Atrapados robando (Caught Stealing)."
+    },
+    "BB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas (Walks)."
+    },
+    "SO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ponches (Strikeouts)."
+    },
+    "IBB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas intencionales."
+    },
+    "HBP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Pelotazos recibidos (Hit By Pitch)."
+    },
+    "SH": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Toques de sacrificio (Sacrifice Hits)."
+    },
+    "SF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Elevados de sacrificio (Sacrifice Flies)."
+    },
+    "GIDP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bateos para doble jugada (Ground Into Double Play)."
+    }
+  },
+  "players": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador (clave principal)."
+    },
+    "birthYear": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Año de nacimiento."
+    },
+    "birthMonth": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Mes de nacimiento."
+    },
+    "birthDay": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Día de nacimiento."
+    },
+    "birthCountry": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "País de nacimiento."
+    },
+    "birthState": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Estado o provincia de nacimiento."
+    },
+    "birthCity": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ciudad de nacimiento."
+    },
+    "deathYear": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Año de fallecimiento."
+    },
+    "deathMonth": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Mes de fallecimiento."
+    },
+    "deathDay": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Día de fallecimiento."
+    },
+    "deathCountry": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "País de fallecimiento."
+    },
+    "deathState": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Estado o provincia de fallecimiento."
+    },
+    "deathCity": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ciudad de fallecimiento."
+    },
+    "nameFirst": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Primer nombre."
+    },
+    "nameLast": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Apellido."
+    },
+    "nameGiven": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Nombre de pila completo."
+    },
+    "weight": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Peso en libras."
+    },
+    "height": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Altura en pulgadas."
+    },
+    "bats": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Mano con la que batea (L, R, B)."
+    },
+    "throws": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Mano con la que lanza (L, R)."
+    },
+    "debut": {
+      "data_type": "varchar(10)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Fecha del debut en Grandes Ligas."
+    },
+    "finalGame": {
+      "data_type": "varchar(10)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Fecha del último juego en Grandes Ligas."
+    },
+    "retroID": {
+      "data_type": "varchar(9)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "ID de Retrosheet."
+    },
+    "bbrefID": {
+      "data_type": "varchar(9)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "ID de Baseball Reference."
+    }
+  },
+  "battingpost": {
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la post-temporada."
+    },
+    "round": {
+      "data_type": "varchar(10)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Ronda de la post-temporada (e.g., WS, LCS, DS)."
+    },
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos jugados."
+    },
+    "AB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Turnos al bate."
+    },
+    "R": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras anotadas."
+    },
+    "H": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Hits conectados."
+    },
+    "2B": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Dobles."
+    },
+    "3B": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Triples."
+    },
+    "HR": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Jonrones."
+    },
+    "RBI": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras impulsadas."
+    },
+    "SB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases robadas."
+    },
+    "CS": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Atrapados robando."
+    },
+    "BB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas."
+    },
+    "SO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ponches."
+    },
+    "IBB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas intencionales."
+    },
+    "HBP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Pelotazos recibidos."
+    },
+    "SH": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Toques de sacrificio."
+    },
+    "SF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Elevados de sacrificio."
+    },
+    "GIDP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bateos para doble jugada."
+    }
+  },
+  "fielding": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "stint": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Período del jugador con un equipo en el año."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "POS": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Posición de fildeo."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos jugados en esta posición."
+    },
+    "GS": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como titular (Games Started)."
+    },
+    "InnOuts": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Total de outs registrados en el campo (Innings Played * 3)."
+    },
+    "PO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Outs puestos (Putouts)."
+    },
+    "A": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Asistencias (Assists)."
+    },
+    "E": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Errores (Errors)."
+    },
+    "DP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Doble jugadas (Double Plays)."
+    },
+    "PB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Passed Balls (solo para Catcher)."
+    },
+    "WP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Wild Pitches (solo para Catcher)."
+    },
+    "SB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases robadas permitidas (solo para Catcher)."
+    },
+    "CS": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Atrapados robando (solo para Catcher)."
+    },
+    "ZR": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Factor de rango (Zone Rating)."
+    }
+  },
+  "fieldingof": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador (solo jardineros)."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "stint": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Período del jugador con un equipo en el año."
+    },
+    "Glf": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Left Fielder."
+    },
+    "Gcf": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Center Fielder."
+    },
+    "Grf": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como Right Fielder."
+    }
+  },
+  "halloffame": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del candidato (jugador/manager/ejecutivo)."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la votación."
+    },
+    "votedBy": {
+      "data_type": "varchar(60)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Comité que realizó la votación (e.g., BBWAA)."
+    },
+    "ballots": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Total de papeletas emitidas."
+    },
+    "needed": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Votos necesarios para la inducción."
+    },
+    "votes": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Votos recibidos por el candidato."
+    },
+    "inducted": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Indica si fue inducido ('Y')."
+    },
+    "category": {
+      "data_type": "varchar(20)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Categoría de la postulación (e.g., 'Player')."
+    },
+    "needed_note": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Nota sobre el requerimiento de votos."
+    }
+  },
+  "managers": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del manager."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "inseason": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Orden del manager para el equipo en la temporada (1, 2, etc.)."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos dirigidos."
+    },
+    "W": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Victorias (Wins)."
+    },
+    "L": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Derrotas (Losses)."
+    },
+    "rank": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Posición final del equipo."
+    },
+    "plyrMgr": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Indica si fue Manager-Jugador ('Y')."
+    }
+  },
+  "managershalf": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del manager."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "half": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Mitad de la temporada (1 o 2)."
+    },
+    "inseason": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Orden del manager en esta mitad de temporada."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos dirigidos en la mitad."
+    },
+    "W": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Victorias en la mitad."
+    },
+    "L": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Derrotas en la mitad."
+    },
+    "rank": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Posición final del equipo en la mitad."
+    }
+  },
+  "pitching": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del lanzador."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "stint": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Período del jugador con un equipo en el año."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "W": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Victorias (Wins)."
+    },
+    "L": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Derrotas (Losses)."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos lanzados."
+    },
+    "GS": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como abridor (Games Started)."
+    },
+    "CG": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos completos (Complete Games)."
+    },
+    "SHO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Blanqueadas (Shutouts)."
+    },
+    "SV": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos salvados (Saves)."
+    },
+    "IPouts": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Total de outs registrados al lanzar (Innings Pitched * 3)."
+    },
+    "H": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Hits permitidos."
+    },
+    "ER": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras limpias permitidas (Earned Runs)."
+    },
+    "HR": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Jonrones permitidos."
+    },
+    "BB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas permitidas."
+    },
+    "SO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ponches propinados."
+    },
+    "BAOpp": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Promedio de bateo del oponente."
+    },
+    "ERA": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Promedio de Carreras Limpias (ERA)."
+    },
+    "IBB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas intencionales dadas."
+    },
+    "WP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Wild Pitches (lanzamientos descontrolados)."
+    },
+    "HBP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Pelotazos dados."
+    },
+    "BK": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Balks cometidos."
+    },
+    "BFP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bateadores enfrentados (Batters Faced Pitcher)."
+    },
+    "GF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos terminados (Games Finished)."
+    },
+    "R": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras totales permitidas."
+    },
+    "SH": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Toques de sacrificio permitidos."
+    },
+    "SF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Elevados de sacrificio permitidos."
+    },
+    "GIDP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bateos para doble jugada provocados."
+    }
+  },
+  "pitchingpost": {
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del lanzador."
+    },
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la post-temporada."
+    },
+    "round": {
+      "data_type": "varchar(10)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Ronda de la post-temporada."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "W": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Victorias en la ronda."
+    },
+    "L": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Derrotas en la ronda."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos lanzados en la ronda."
+    },
+    "GS": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como abridor en la ronda."
+    },
+    "CG": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos completos en la ronda."
+    },
+    "SHO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Blanqueadas en la ronda."
+    },
+    "SV": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos salvados en la ronda."
+    },
+    "IPouts": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Total de outs registrados al lanzar en la ronda."
+    },
+    "H": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Hits permitidos en la ronda."
+    },
+    "ER": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras limpias permitidas en la ronda."
+    },
+    "HR": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Jonrones permitidos en la ronda."
+    },
+    "BB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas permitidas en la ronda."
+    },
+    "SO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ponches propinados en la ronda."
+    },
+    "BAOpp": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Promedio de bateo del oponente en la ronda."
+    },
+    "ERA": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Promedio de Carreras Limpias en la ronda."
+    },
+    "IBB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas intencionales dadas en la ronda."
+    },
+    "WP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Wild Pitches en la ronda."
+    },
+    "HBP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Pelotazos dados en la ronda."
+    },
+    "BK": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Balks cometidos en la ronda."
+    },
+    "BFP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bateadores enfrentados en la ronda."
+    },
+    "GF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos terminados en la ronda."
+    },
+    "R": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras totales permitidas en la ronda."
+    },
+    "SH": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Toques de sacrificio permitidos en la ronda."
+    },
+    "SF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Elevados de sacrificio permitidos en la ronda."
+    },
+    "GIDP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bateos para doble jugada provocados en la ronda."
+    }
+  },
+  "salaries": {
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "playerID": {
+      "data_type": "varchar(9)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del jugador."
+    },
+    "salary": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Salario del jugador en dólares."
+    }
+  },
+  "schools": {
+    "schoolID": {
+      "data_type": "varchar(15)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único de la universidad (clave principal)."
+    },
+    "schoolName": {
+      "data_type": "varchar(50)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Nombre de la universidad."
+    },
+    "schoolCity": {
+      "data_type": "varchar(50)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ciudad de la universidad."
+    },
+    "schoolState": {
+      "data_type": "varchar(50)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Estado o provincia de la universidad."
+    },
+    "schoolCountry": {
+      "data_type": "varchar(50)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "País de la universidad."
+    }
+  },
+  "seriespost": {
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la serie de post-temporada."
+    },
+    "round": {
+      "data_type": "varchar(5)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Ronda de la serie (e.g., WS, LCS)."
+    },
+    "teamIDwinner": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del equipo ganador."
+    },
+    "lgIDwinner": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Liga del equipo ganador."
+    },
+    "teamIDloser": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador del equipo perdedor."
+    },
+    "lgIDloser": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Liga del equipo perdedor."
+    },
+    "wins": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Victorias del equipo ganador."
+    },
+    "losses": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Derrotas del equipo ganador (Victorias del perdedor)."
+    },
+    "ties": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Empates en la serie."
+    }
+  },
+  "teams": {
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único del equipo en la temporada."
+    },
+    "franchID": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Identificador de la franquicia."
+    },
+    "divID": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "División (E, C, W)."
+    },
+    "Rank": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Posición final en la división."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos jugados."
+    },
+    "Ghome": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos como local."
+    },
+    "W": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Victorias (Wins)."
+    },
+    "L": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Derrotas (Losses)."
+    },
+    "DivWin": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ganador de la división ('Y')."
+    },
+    "WCWin": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ganador del Wild Card ('Y')."
+    },
+    "LgWin": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ganador del banderín de la liga ('Y')."
+    },
+    "WSWin": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ganador de la Serie Mundial ('Y')."
+    },
+    "R": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras anotadas (Runs)."
+    },
+    "AB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Turnos al bate (At Bats)."
+    },
+    "H": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Hits conectados."
+    },
+    "2B": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Dobles."
+    },
+    "3B": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Triples."
+    },
+    "HR": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Jonrones."
+    },
+    "BB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas recibidas."
+    },
+    "SO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ponches recibidos."
+    },
+    "SB": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases robadas."
+    },
+    "CS": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Atrapados robando."
+    },
+    "HBP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Pelotazos recibidos."
+    },
+    "SF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Elevados de sacrificio."
+    },
+    "RA": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras permitidas (Runs Allowed)."
+    },
+    "ER": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Carreras limpias permitidas (Earned Runs)."
+    },
+    "ERA": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Promedio de Carreras Limpias."
+    },
+    "CG": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos completos lanzados."
+    },
+    "SHO": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Blanqueadas."
+    },
+    "SV": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos salvados."
+    },
+    "IPouts": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Total de outs registrados al lanzar (IP * 3)."
+    },
+    "HA": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Hits permitidos."
+    },
+    "HRA": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Jonrones permitidos."
+    },
+    "BBA": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Bases por bolas permitidas."
+    },
+    "SOA": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ponches propinados."
+    },
+    "E": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Errores cometidos."
+    },
+    "DP": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Doble jugadas realizadas."
+    },
+    "FP": {
+      "data_type": "float",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Porcentaje de fildeo (Fielding Percentage)."
+    },
+    "name": {
+      "data_type": "varchar(50)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Nombre del equipo."
+    },
+    "park": {
+      "data_type": "varchar(255)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Estadio local."
+    },
+    "attendance": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Asistencia total."
+    },
+    "BPF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Factor de parque de bateo."
+    },
+    "PPF": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Factor de parque de pitcheo."
+    },
+    "teamIDBR": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "ID de Baseball Reference."
+    },
+    "teamIDlahman45": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "ID de Lahman 4.5."
+    },
+    "teamIDretro": {
+      "data_type": "varchar(3)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "ID de Retrosheet."
+    }
+  },
+  "teamsfranchises": {
+    "franchID": {
+      "data_type": "varchar(3)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador único de la franquicia (clave principal)."
+    },
+    "franchName": {
+      "data_type": "varchar(50)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Nombre de la franquicia."
+    },
+    "active": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Indica si la franquicia está activa ('Y')."
+    },
+    "NAassoc": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Indica si fue miembro de la Asociación Nacional ('Y')."
+    }
+  },
+  "teamshalf": {
+    "yearID": {
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Año de la temporada."
+    },
+    "lgID": {
+      "data_type": "varchar(2)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador de la liga."
+    },
+    "teamID": {
+      "data_type": "varchar(3)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Identificador del equipo."
+    },
+    "Half": {
+      "data_type": "varchar(1)",
+      "is_nullable": false,
+      "is_identity": false,
+      "description": "Mitad de la temporada ('1' o '2')."
+    },
+    "divID": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "División."
+    },
+    "DivWin": {
+      "data_type": "varchar(1)",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Ganador de la división en esta mitad ('Y')."
+    },
+    "Rank": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Posición en la mitad de la temporada."
+    },
+    "G": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Juegos jugados en la mitad."
+    },
+    "W": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Victorias en la mitad."
+    },
+    "L": {
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "description": "Derrotas en la mitad."
+    }
+  }
+}
+]
+}

@@ -1,0 +1,155 @@
+{
+  "database_name": "saledb",
+  "Schema": "dbo",	
+  "description": "Diccionario de Datos de la base de datos salesdb que es una base de datos de VENTAS. Este documento describe las tablas, columnas, tipos de datos, restricciones y una descripción semántica para facilitar la comprensión de la estructura.",
+  "tables": [
+    {
+      "table_name": "Customers",
+      "columns": [
+        {
+          "column_name": "CustomerID",
+          "data_type": "int",
+          "max_length": "4",
+          "allows_null": false,
+          "is_identity": true,
+          "description": "Identificador único o clave primaria del registro."
+        },
+        {
+          "column_name": "FirstName",
+          "data_type": "nvarchar",
+          "max_length": "80",
+          "allows_null": false,
+          "is_identity": false,
+          "description": "Campo informativo relacionado con la tabla."
+        },
+        {
+          "column_name": "MiddleInitial",
+          "data_type": "nvarchar",
+          "max_length": "80",
+          "allows_null": true,
+          "is_identity": false,
+          "description": "Identificador único o clave primaria del registro."
+        },
+        {
+          "column_name": "LastName",
+          "data_type": "nvarchar",
+          "max_length": "80",
+          "allows_null": false,
+          "is_identity": false,
+          "description": "Campo informativo relacionado con la tabla."
+        }
+      ]
+    },
+    {
+      "table_name": "Employees",
+      "columns": [
+        {
+          "column_name": "EmployeeID",
+          "data_type": "int",
+          "max_length": "4",
+          "allows_null": false,
+          "is_identity": true,
+          "description": "Identificador único o clave primaria del registro."
+        },
+        {
+          "column_name": "FirstName",
+          "data_type": "nvarchar",
+          "max_length": "80",
+          "allows_null": false,
+          "is_identity": false,
+          "description": "Campo informativo relacionado con la tabla."
+        },
+        {
+          "column_name": "MiddleInitial",
+          "data_type": "nvarchar",
+          "max_length": "80",
+          "allows_null": true,
+          "is_identity": false,
+          "description": "Identificador único o clave primaria del registro. Campo informativo relacionado con la tabla."
+        },
+        {
+          "column_name": "LastName",
+          "data_type": "nvarchar",
+          "max_length": "80",
+          "allows_null": false,
+          "is_identity": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_name": "Products",
+      "columns": [
+        {
+          "column_name": "ProductID",
+          "data_type": "int",
+          "max_length": "4",
+          "allows_null": false,
+          "is_identity": true,
+          "description": "Identificador único o clave primaria del registro"
+        },
+        {
+          "column_name": "Name",
+          "data_type": "nvarchar",
+          "max_length": "100",
+          "allows_null": false,
+          "is_identity": false,
+          "description": "Campo informativo relacionado con la tabla."
+        },
+        {
+          "column_name": "Price",
+          "data_type": "money",
+          "max_length": "8",
+          "allows_null": true,
+          "is_identity": false,
+          "description": "Campo informativo relacionado con la tabla."
+        }
+      ]
+    },
+    {
+      "table_name": "Sales",
+      "columns": [
+        {
+          "column_name": "SalesID",
+          "data_type": "int",
+          "max_length": "4",
+          "allows_null": false,
+          "is_identity": true,
+          "description": "Identificador único o clave primaria del registro."
+        },
+        {
+          "column_name": "SalesPersonID",
+          "data_type": "int",
+          "max_length": "4",
+          "allows_null": false,
+          "is_identity": false,
+          "description": "Identificador único o clave primaria del registro. (Probablemente FK a Employees.EmployeeID)"
+        },
+        {
+          "column_name": "CustomerID",
+          "data_type": "int",
+          "max_length": "4",
+          "allows_null": false,
+          "is_identity": false,
+          "description": "Identificador único o clave primaria del registro. (Probablemente FK a Customers.CustomerID)"
+        },
+        {
+          "column_name": "ProductID",
+          "data_type": "int",
+          "max_length": "4",
+          "allows_null": false,
+          "is_identity": false,
+          "description": "Identificador único o clave primaria del registro. (Probablemente FK a Products.ProductID)"
+        },
+        {
+          "column_name": "Quantity",
+          "data_type": "int",
+          "max_length": "4",
+          "allows_null": false,
+          "is_identity": false,
+          "description": "Campo informativo relacionado con la tabla."
+        }
+      ]
+    }
+  ]
+}
